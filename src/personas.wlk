@@ -1,5 +1,13 @@
 
 object olivia {
+	var concentracion=6
+	
+	method recibirMasajes() { concentracion += 3 }
+	method darseUnBanioDeVapor() { }
+	method discutir() { concentracion -= 1 }
+	
+	method gradoDeConcentracion(){ return concentracion }
+	
 }
 
 
@@ -22,12 +30,16 @@ object bruno {
 	method estaPerfecto() { return self.esFeliz() and not self.tieneSed() and self.peso().between(50000, 70000) }
 	method mediodiaEnCasa() { 
 		self.comerFideos()
-		// y que mas?
+		self.tomarAgua()
+		self.verElNoticiero()
 	}
 }
 
 object ramiro {
-	method recibirMasajes() { /*... completar ...*/ }
+	var contracturado = 0
+	var pielGrasosa = false
+	
+	method recibirMasajes() { contracturado -= }
 	method darseUnBanioDeVapor() { /*... completar ...*/ }
 	method comerseUnBigMac() { /*... completar ...*/ }
 	method bajarALaFosa() { /*... completar ...*/ }
