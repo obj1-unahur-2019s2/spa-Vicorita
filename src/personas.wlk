@@ -36,17 +36,30 @@ object bruno {
 }
 
 object ramiro {
-	var contracturado = 0
+	var contractura = 0
 	var pielGrasosa = false
 	
-	method recibirMasajes() { contracturado -= }
-	method darseUnBanioDeVapor() { /*... completar ...*/ }
-	method comerseUnBigMac() { /*... completar ...*/ }
-	method bajarALaFosa() { /*... completar ...*/ }
-	method jugarAlPaddle() { /*... completar ...*/ }
+	method pielGrasosa(){ return pielGrasosa}
+	method contractura(){ return contractura}
+	
+	method recibirMasajes() { 
+		contractura -= 2
+		if(contractura < 0) {
+			contractura = 0
+		}
+	}
+	method darseUnBanioDeVapor() { pielGrasosa = false }
+	method comerseUnBigMac() { pielGrasosa = true  }
+	method bajarALaFosa() { 
+		pielGrasosa = true
+		contractura += 1
+	}
+	method jugarAlPaddle() { contractura += 3 }
 	
 	method diaDeTrabajo() { 
-		/*... completar ...*/
+		self.bajarALaFosa()
+		self.comerseUnBigMac()
+		self.bajarALaFosa()
 	}
 }
 

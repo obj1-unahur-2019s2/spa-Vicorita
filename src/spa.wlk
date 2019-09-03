@@ -1,7 +1,7 @@
 import personas.*
 
 object spa {
-	var ultimaPersona
+	var property ultimaPersona
 	
 	method atender(persona) {
 		persona.recibirMasajes()
